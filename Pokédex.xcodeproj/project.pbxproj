@@ -12,6 +12,7 @@
 		518537D61C50179200BCABBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518537D41C50179200BCABBA /* Main.storyboard */; };
 		518537D81C50179200BCABBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518537D71C50179200BCABBA /* Assets.xcassets */; };
 		518537DB1C50179200BCABBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518537D91C50179200BCABBA /* LaunchScreen.storyboard */; };
+		5191AE591C501F1400EA47CE /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5191AE581C501F1400EA47CE /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		518537D71C50179200BCABBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		518537DA1C50179200BCABBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		518537DC1C50179200BCABBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5191AE581C501F1400EA47CE /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				518537D41C50179200BCABBA /* Main.storyboard */,
 				518537D71C50179200BCABBA /* Assets.xcassets */,
 				518537D91C50179200BCABBA /* LaunchScreen.storyboard */,
+				5191AE581C501F1400EA47CE /* pokemon.csv */,
 				518537DC1C50179200BCABBA /* Info.plist */,
 			);
 			path = "Pokédex";
@@ -125,6 +128,7 @@
 			files = (
 				518537DB1C50179200BCABBA /* LaunchScreen.storyboard in Resources */,
 				518537D81C50179200BCABBA /* Assets.xcassets in Resources */,
+				5191AE591C501F1400EA47CE /* pokemon.csv in Resources */,
 				518537D61C50179200BCABBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 				518537E11C50179200BCABBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
