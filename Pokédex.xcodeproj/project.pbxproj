@@ -13,6 +13,12 @@
 		518537D81C50179200BCABBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518537D71C50179200BCABBA /* Assets.xcassets */; };
 		518537DB1C50179200BCABBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518537D91C50179200BCABBA /* LaunchScreen.storyboard */; };
 		5191AE591C501F1400EA47CE /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5191AE581C501F1400EA47CE /* pokemon.csv */; };
+		5191AE5C1C50213E00EA47CE /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191AE5B1C50213E00EA47CE /* Pokemon.swift */; };
+		51A5D8591C52D0A000425A81 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5D8581C52D0A000425A81 /* csv.swift */; };
+		51A5D85C1C52D56E00425A81 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A5D85A1C52D56E00425A81 /* Pokemon Hollow.ttf */; };
+		51A5D85D1C52D56E00425A81 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A5D85B1C52D56E00425A81 /* Pokemon Solid.ttf */; };
+		51A5D8611C52DDB600425A81 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A5D8601C52DDB600425A81 /* music.mp3 */; };
+		51B5583B1C503E3800609B0E /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5583A1C503E3800609B0E /* PokeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		518537DA1C50179200BCABBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		518537DC1C50179200BCABBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5191AE581C501F1400EA47CE /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		5191AE5B1C50213E00EA47CE /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		51A5D8581C52D0A000425A81 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		51A5D85A1C52D56E00425A81 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		51A5D85B1C52D56E00425A81 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		51A5D8601C52DDB600425A81 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		51B5583A1C503E3800609B0E /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,53 @@
 		518537CF1C50179200BCABBA /* Pokédex */ = {
 			isa = PBXGroup;
 			children = (
+				51B558391C503E1500609B0E /* View */,
+				5191AE5A1C50212600EA47CE /* Model */,
+				51A5D8561C52D06800425A81 /* Util */,
+				51A5D8571C52D08100425A81 /* Resources */,
 				518537D01C50179200BCABBA /* AppDelegate.swift */,
 				518537D21C50179200BCABBA /* ViewController.swift */,
 				518537D41C50179200BCABBA /* Main.storyboard */,
 				518537D71C50179200BCABBA /* Assets.xcassets */,
 				518537D91C50179200BCABBA /* LaunchScreen.storyboard */,
-				5191AE581C501F1400EA47CE /* pokemon.csv */,
 				518537DC1C50179200BCABBA /* Info.plist */,
 			);
 			path = "Pokédex";
+			sourceTree = "<group>";
+		};
+		5191AE5A1C50212600EA47CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5191AE5B1C50213E00EA47CE /* Pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		51A5D8561C52D06800425A81 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				51A5D8581C52D0A000425A81 /* csv.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		51A5D8571C52D08100425A81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				51A5D8601C52DDB600425A81 /* music.mp3 */,
+				51A5D85A1C52D56E00425A81 /* Pokemon Hollow.ttf */,
+				51A5D85B1C52D56E00425A81 /* Pokemon Solid.ttf */,
+				5191AE581C501F1400EA47CE /* pokemon.csv */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		51B558391C503E1500609B0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51B5583A1C503E3800609B0E /* PokeCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +178,10 @@
 			files = (
 				518537DB1C50179200BCABBA /* LaunchScreen.storyboard in Resources */,
 				518537D81C50179200BCABBA /* Assets.xcassets in Resources */,
+				51A5D85C1C52D56E00425A81 /* Pokemon Hollow.ttf in Resources */,
+				51A5D85D1C52D56E00425A81 /* Pokemon Solid.ttf in Resources */,
 				5191AE591C501F1400EA47CE /* pokemon.csv in Resources */,
+				51A5D8611C52DDB600425A81 /* music.mp3 in Resources */,
 				518537D61C50179200BCABBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,8 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B5583B1C503E3800609B0E /* PokeCell.swift in Sources */,
 				518537D31C50179200BCABBA /* ViewController.swift in Sources */,
 				518537D11C50179200BCABBA /* AppDelegate.swift in Sources */,
+				5191AE5C1C50213E00EA47CE /* Pokemon.swift in Sources */,
+				51A5D8591C52D0A000425A81 /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +312,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dishanknarang.Poke-dex";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -267,6 +324,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dishanknarang.Poke-dex";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
