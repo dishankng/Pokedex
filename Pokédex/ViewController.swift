@@ -90,7 +90,19 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         return pokemon.count
     }
     
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let poke: Pokemon!
+        
+        if inSearchMode {
+            poke = filteredPokemonn[indexPath.row]
+            performSegueWithIdentifier("PokemonDetailVC", sender: poke)
+
+        } else {
+            poke = pokemon[indexPath.row]
+            performSegueWithIdentifier("PokemonDetailVC", sender: poke)
+
+        }
         
     }
     
@@ -147,6 +159,16 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         } else {
             musicPlayer.play()
             sender.alpha = 0.6
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailsVC = segue.destinationViewController as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    detailsVC.pokemon = poke
+                }
+            }
         }
     }
 }
