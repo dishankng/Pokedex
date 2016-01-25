@@ -56,7 +56,12 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
-        descriptionLbl.text = pokemon.description
+//        descriptionLbl.text = pokemon.description
+        if segmentedControl.selectedSegmentIndex == 0 {
+            descriptionLbl.text = pokemon.description
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            descriptionLbl.text = pokemon.abilities
+        }
         typeLbl.text = pokemon.type
         defenseLbl.text = pokemon.defense
         attackLbl.text = pokemon.attack
@@ -74,7 +79,7 @@ class PokemonDetailVC: UIViewController {
             var temp = "Next Evolution: \(pokemon.nextEvoTxt)"
             
             if pokemon.nextEvolvl != "" {
-                temp += " LVL-\(pokemon.nextEvolvl)"
+                temp += " LVL:\(pokemon.nextEvolvl)"
             }
             evoLbl.text = temp
         }

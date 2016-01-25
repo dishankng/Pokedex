@@ -206,7 +206,7 @@ class Pokemon {
                     } else {
                         self._abilities! += ""
                     }
-                    print(self._abilities)
+//                    print(self._abilities)
                     
                 }
                 if let evolutions = dict["evolutions"] as? [Dictionary<String,AnyObject>] where evolutions.count > 0 {
