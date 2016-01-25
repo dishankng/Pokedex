@@ -266,9 +266,12 @@
                                 <animations/>
                                 <segments>
                                     <segment title="Bio"/>
-                                    <segment title="Moves"/>
+                                    <segment title="Abilities"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.200709052" blue="0.14294336930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentIndexChanged:" destination="lyW-h8-NwH" eventType="valueChanged" id="DXf-Yi-qK9"/>
+                                </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-aJ-0fC">
                                 <rect key="frame" x="20" y="123" width="120" height="120"/>
@@ -631,6 +634,7 @@
                         <outlet property="nameLbl" destination="ENk-b3-Nkh" id="r2N-UP-GbL"/>
                         <outlet property="nextEvo" destination="i0N-bz-Gpy" id="MtE-1K-7n8"/>
                         <outlet property="pokedexIdLbl" destination="KrG-6M-ml3" id="MMc-Rj-nuD"/>
+                        <outlet property="segmentedControl" destination="Jv0-dV-GGV" id="EDS-Hm-ShL"/>
                         <outlet property="speedLbl" destination="CCp-6Q-0bT" id="atI-Gm-vIx"/>
                         <outlet property="transitionImg" destination="Hd9-yQ-mEg" id="o50-9v-cRv"/>
                         <outlet property="typeLbl" destination="rCy-Cj-7pu" id="nSt-Pg-yGc"/>

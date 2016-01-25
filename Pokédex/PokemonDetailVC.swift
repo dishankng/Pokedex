@@ -38,6 +38,7 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var nextEvo: UIImageView!
     @IBOutlet weak var transitionImg: UIImageView!
     @IBOutlet weak var evoLbl: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var pokemon: Pokemon!
 
@@ -83,4 +84,11 @@ class PokemonDetailVC: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func segmentIndexChanged(sender: AnyObject) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            descriptionLbl.text = pokemon.description
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            descriptionLbl.text = pokemon.abilities
+        }
+    }
 }

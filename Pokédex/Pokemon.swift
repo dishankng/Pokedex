@@ -24,6 +24,7 @@ class Pokemon {
     private var _speed: String!
     private var _hp: String!
     private var _pokemonUrl: String!
+    private var _abilities: String!
     
     var name: String {
         return _name
@@ -96,6 +97,12 @@ class Pokemon {
             _hp = ""
         }
         return _hp
+    }
+    var abilities: String {
+        if _abilities == nil {
+            _abilities = ""
+        }
+        return _abilities
     }
     
     init(name: String, pokedexID: Int) {
@@ -185,7 +192,23 @@ class Pokemon {
                 } else {
                     self._description = ""
                 }
-                
+                if let abilities = dict["abilities"] as? [Dictionary<String,String>] where abilities.count > 0 {
+                    if let ability = abilities[0]["name"] {
+                        self._abilities = "    1. \(ability.uppercaseFirst)\n"
+                        
+                        if abilities.count > 1 {
+                            for var i = 1; i < abilities.count; i++ {
+                                if let ability1 = abilities[i]["name"] {
+                                    self._abilities! += "    \(i + 1). \(ability1.uppercaseFirst)\n"
+                                }
+                            }
+                        }
+                    } else {
+                        self._abilities! += ""
+                    }
+                    print(self._abilities)
+                    
+                }
                 if let evolutions = dict["evolutions"] as? [Dictionary<String,AnyObject>] where evolutions.count > 0 {
                     if let nextEvo = evolutions[0]["to"] as? String {
                         //Can't support mega pokemon for now
