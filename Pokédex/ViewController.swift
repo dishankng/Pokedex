@@ -27,14 +27,13 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         collection.dataSource = self
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.Done
+        
+        //STUPID STUFF. CAN BE DONE DIRECTLY FROM THE STORYBOARD
 //        searchBar.showsCancelButton = true
 //        let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKkeyboard")
 //        let scroll: UIGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissKkeyboard")
 //        view.addGestureRecognizer(tap)
 //        view.addGestureRecognizer(scroll)
-//        dynamicSizeView(UIScreen.mainScreen().bounds.size)
-
-
         
         parsePokemonCSV()
         initAudio()
@@ -44,10 +43,10 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     override func viewWillAppear(animated: Bool) {
         dynamicSizeView(UIScreen.mainScreen().bounds.size)
     }
-    
+    // Dynamically Change size of the cell depending on the screen size
     func dynamicSizeView(size: CGSize) {
-        print(size.width)
-        print(size.height)
+//        print(size.width)
+//        print(size.height)
         switch (size.width, size.height) {
         case (375, 667) :
             cellHeight = 110.0
@@ -71,8 +70,8 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
             cellHeight = 125.0
             cellWidth = 125.0
         default:
-            cellHeight = 92.0
-            cellWidth = 92.0
+            cellHeight = 93.0
+            cellWidth = 93.0
         }
         
     }
@@ -86,6 +85,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
                 for row in rows {
                     let pokeId = Int(row["id"]!)!
                     let name = row["identifier"]!
+//                    print(name)
                     let poke = Pokemon(name: name, pokedexID: pokeId)
                     pokemon.append(poke)
                 }
@@ -171,7 +171,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSizeMake(cellHeight, cellWidth)
+        return CGSizeMake(cellWidth, cellHeight)
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

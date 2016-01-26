@@ -40,7 +40,7 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var evoLbl: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    var pokemon: Pokemon!
+    var pokemon: Pokemon!  // Sent from prepareForSegue function
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +56,7 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
-//        descriptionLbl.text = pokemon.description
-        if segmentedControl.selectedSegmentIndex == 0 {
-            descriptionLbl.text = pokemon.description
-        } else if segmentedControl.selectedSegmentIndex == 1 {
-            descriptionLbl.text = pokemon.abilities
-        }
+        descriptionLbl.text = pokemon.description
         typeLbl.text = pokemon.type
         defenseLbl.text = pokemon.defense
         attackLbl.text = pokemon.attack
@@ -88,7 +83,8 @@ class PokemonDetailVC: UIViewController {
     @IBAction func backPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
+    //SEGMENTED CONTROLL
     @IBAction func segmentIndexChanged(sender: AnyObject) {
         if segmentedControl.selectedSegmentIndex == 0 {
             descriptionLbl.text = pokemon.description

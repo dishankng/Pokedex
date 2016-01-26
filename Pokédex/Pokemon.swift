@@ -112,12 +112,11 @@ class Pokemon {
         
     }
     
+    //DOWNLOAD POKEMON DETAILS AS JSON AND PARSE THEM. CLOSURE IS PASSED AS AN ARGUMENT
     func downloadPokemonDetails(completed: DownloadComplete) {
         
         let url = NSURL(string: _pokemonUrl)!
-//        Alamofire.request(.GET, url).responseJSON{(request: NSURLRequest?, response: NSHTTPURLResponse?, result: Result<AnyObject>) -> Void in//        Alamofire.request(.GET, url).responseJSON { (request: NSURLRequest?, response: NSHTTPURLResponse?, result: Result<AnyObject>) -> Void in
-//        }
-        Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+        Alamofire.request(.GET, url).responseJSON { (response) -> Void in  //First Request
             
             let result = response.result.value
 //            print(result.debugDescription)
@@ -176,7 +175,7 @@ class Pokemon {
                     if let url = descArr[0]["resource_uri"] {
                         let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
                         
-                        Alamofire.request(.GET, nsurl).responseJSON { (response) -> Void in
+                        Alamofire.request(.GET, nsurl).responseJSON { (response) -> Void in //Seconnd Request
                             let result = response.result.value
                             
                             if let descDict = result as? Dictionary<String,AnyObject> {
@@ -186,7 +185,7 @@ class Pokemon {
 //                                    print(self._description)
                                 }
                             }
-                            completed()
+                            completed()  //Closure called after Second .GET Request completed
                         }
                     }
                 } else {
@@ -206,7 +205,7 @@ class Pokemon {
                     } else {
                         self._abilities! += ""
                     }
-//                    print(self._abilities)
+                    print(self._abilities)
                     
                 }
                 if let evolutions = dict["evolutions"] as? [Dictionary<String,AnyObject>] where evolutions.count > 0 {

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Poké_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-SO-8RW">
+                                <rect key="frame" x="0.0" y="8" width="85" height="85"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.87319711538461542" green="0.87319711538461542" blue="0.87319711538461542" alpha="0.10633081896551724" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="HGM-rv-ugs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mGk-l4-Bqd">
+                                <rect key="frame" x="0.0" y="95" width="85" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.200709052" blue="0.14294336930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="YLT-YS-nYj"/>
+                                    <constraint firstAttribute="height" constant="21" id="wVE-zc-2fE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ovo-dj-kdw">
+                                <rect key="frame" x="113" y="8" width="192" height="108"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="BDZ-UV-hv8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ovo-dj-kdw" secondAttribute="trailing" constant="5" id="9G6-R0-i1a"/>
+                            <constraint firstItem="mGk-l4-Bqd" firstAttribute="top" secondItem="sCQ-SO-8RW" secondAttribute="bottom" constant="-10" id="Udm-hr-1Nq"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="Ovo-dj-kdw" secondAttribute="bottom" constant="4" id="WM8-ql-RpZ"/>
+                            <constraint firstItem="sCQ-SO-8RW" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="YaP-dh-dKH"/>
+                            <constraint firstItem="Ovo-dj-kdw" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="e0I-5l-qtw"/>
+                            <constraint firstItem="Ovo-dj-kdw" firstAttribute="top" secondItem="sCQ-SO-8RW" secondAttribute="top" id="ijN-qr-V1D"/>
+                            <constraint firstItem="Ovo-dj-kdw" firstAttribute="bottom" secondItem="mGk-l4-Bqd" secondAttribute="bottom" id="n7b-x3-QZg"/>
+                            <constraint firstItem="mGk-l4-Bqd" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="ukn-SZ-pBp"/>
+                            <constraint firstItem="Ovo-dj-kdw" firstAttribute="leading" secondItem="mGk-l4-Bqd" secondAttribute="trailing" constant="12" id="y60-bK-9Zz"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="120"/>
+                    <connections>
+                        <outlet property="descLbl" destination="Ovo-dj-kdw" id="lUY-Au-cN1"/>
+                        <outlet property="nameLbl" destination="mGk-l4-Bqd" id="cg8-kI-t3d"/>
+                        <outlet property="pokeImg" destination="sCQ-SO-8RW" id="h5n-2t-ptb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="45"/>
+        </scene>
+    </scenes>
+</document>
