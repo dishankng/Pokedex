@@ -18,6 +18,8 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     var musicPlayer: AVAudioPlayer!
     var inSearchMode = false
     var filteredPokemonn = [Pokemon]()
+    var cellHeight: CGFloat!
+    var cellWidth: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +32,49 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
 //        let scroll: UIGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissKkeyboard")
 //        view.addGestureRecognizer(tap)
 //        view.addGestureRecognizer(scroll)
+//        dynamicSizeView(UIScreen.mainScreen().bounds.size)
+
+
         
         parsePokemonCSV()
         initAudio()
     
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        dynamicSizeView(UIScreen.mainScreen().bounds.size)
+    }
+    
+    func dynamicSizeView(size: CGSize) {
+        print(size.width)
+        print(size.height)
+        switch (size.width, size.height) {
+        case (375, 667) :
+            cellHeight = 110.0
+            cellWidth = 110.0
+        case (414, 736) :
+            cellHeight = 120.0
+            cellWidth = 120.0
+        case (736, 414) :
+            cellHeight = 120.0
+            cellWidth = 120.0
+        case (768, 1024):
+            cellHeight = 125.0
+            cellWidth = 125.0
+        case (1024, 768):
+            cellHeight = 125.0
+            cellWidth = 125.0
+        case (1024, 1366):
+            cellHeight = 125.0
+            cellWidth = 125.0
+        case (1366, 1024):
+            cellHeight = 125.0
+            cellWidth = 125.0
+        default:
+            cellHeight = 92.0
+            cellWidth = 92.0
+        }
+        
     }
     // PARSING THE NAMES AND IDs
     func parsePokemonCSV() {
@@ -130,7 +171,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSizeMake(90, 90)
+        return CGSizeMake(cellHeight, cellWidth)
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

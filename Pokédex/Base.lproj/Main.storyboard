@@ -128,7 +128,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="49g-7c-4Ql" customClass="PokeCell" customModule="Poke_dex" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="750" reuseIdentifier="PokeCell" id="49g-7c-4Ql" customClass="PokeCell" customModule="Poke_dex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -165,6 +165,7 @@
                                             <constraint firstItem="foI-3C-5ct" firstAttribute="leading" secondItem="49g-7c-4Ql" secondAttribute="leading" id="op5-td-xjQ"/>
                                             <constraint firstAttribute="trailing" secondItem="2g1-pT-Tg2" secondAttribute="trailing" id="tWD-cx-s0f"/>
                                         </constraints>
+                                        <size key="customSize" width="110" height="110"/>
                                         <connections>
                                             <outlet property="nameLbl" destination="foI-3C-5ct" id="zjb-Bk-e6y"/>
                                             <outlet property="thumbImg" destination="2g1-pT-Tg2" id="PXS-xX-81J"/>
@@ -181,15 +182,15 @@
                         <constraints>
                             <constraint firstItem="nKB-9g-Ecf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4CC-lb-HYj"/>
                             <constraint firstAttribute="trailing" secondItem="nKB-9g-Ecf" secondAttribute="trailing" id="Dzp-kF-By7"/>
-                            <constraint firstItem="q6i-ae-Thh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="3" id="Mgi-NX-2WO"/>
+                            <constraint firstItem="q6i-ae-Thh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="Mgi-NX-2WO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zaM-SN-PS6" secondAttribute="bottom" id="QK5-Pb-x7r"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q6i-ae-Thh" secondAttribute="bottom" constant="20" id="Rxr-bc-moe">
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q6i-ae-Thh" secondAttribute="bottom" constant="10" id="Rxr-bc-moe">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
-                            <constraint firstItem="q6i-ae-Thh" firstAttribute="top" secondItem="zav-Kp-zi5" secondAttribute="bottom" constant="20" id="UQ3-6i-RSY">
+                            <constraint firstItem="q6i-ae-Thh" firstAttribute="top" secondItem="zav-Kp-zi5" secondAttribute="bottom" constant="15" id="UQ3-6i-RSY">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
-                            <constraint firstItem="q6i-ae-Thh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-3" id="Wlc-r8-CaZ"/>
+                            <constraint firstItem="q6i-ae-Thh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="Wlc-r8-CaZ"/>
                             <constraint firstItem="zaM-SN-PS6" firstAttribute="top" secondItem="zav-Kp-zi5" secondAttribute="bottom" id="Zij-FB-7r7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zav-Kp-zi5" secondAttribute="trailing" constant="-20" id="ZzZ-2W-5Vw"/>
                             <constraint firstItem="zaM-SN-PS6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bP3-ql-FiR"/>
@@ -299,18 +300,20 @@
                                 <color key="textColor" red="1" green="0.200709052" blue="0.14294336930000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="rCy-Cj-7pu">
-                                <rect key="frame" x="117" y="264" width="86" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="rCy-Cj-7pu">
+                                <rect key="frame" x="103" y="264" width="123" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="1Dk-Km-wzM"/>
                                     <constraint firstAttribute="width" constant="103" id="3UL-ly-87x"/>
+                                    <constraint firstAttribute="width" constant="95" id="9TH-yl-TLW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="1Dk-Km-wzM"/>
                                         <exclude reference="3UL-ly-87x"/>
                                     </mask>
                                 </variation>
